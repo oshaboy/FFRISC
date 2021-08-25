@@ -17,7 +17,7 @@ void ffrisc_out(char * f){
 void ffrisc_in(char * f){
 	if (incount==0||incount==8){
 		incount=0;
-		*f=getc(stdin);
+		inbuffer=getc(stdin);
 	}
 	*f=(inbuffer&0x01);
 	inbuffer>>1;
