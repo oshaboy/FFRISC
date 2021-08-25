@@ -19,7 +19,7 @@ void ffrisc_in(char * f){
 		incount=0;
 		*f=getc(stdin);
 	}
-	*f=(inbuffer|0x01);
+	*f=(inbuffer&0x01);
 	inbuffer>>1;
 	incount++;
 	return;
